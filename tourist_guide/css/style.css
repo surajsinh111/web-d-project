@@ -1,0 +1,151 @@
+/* --------------------
+   General Styles
+-------------------- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background-color: #f8f9fa;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* --------------------
+   Navbar
+-------------------- */
+.navbar {
+    padding: 1rem 2rem;
+    transition: background 0.3s;
+}
+
+.navbar a:hover {
+    color: #1e81b0 !important;
+}
+
+/* --------------------
+   Hero Section Carousel
+-------------------- */
+.hero-carousel {
+    height: 60vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-carousel .carousel-item img {
+    height: 60vh;
+    object-fit: cover;
+    filter: brightness(65%);
+}
+
+.carousel-caption {
+    background: rgba(0,0,0,0.4);
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.carousel-caption h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffc107;
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+/* --------------------
+   Place & Food Cards
+-------------------- */
+.place-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding-bottom: 1rem;
+}
+
+.place-card img {
+    transition: transform 0.3s ease;
+}
+
+.place-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.25);
+}
+
+.place-card:hover img {
+    transform: scale(1.05);
+}
+
+.place-card h5 {
+    margin-top: 0.5rem;
+    font-weight: 600;
+    color: #1e81b0;
+}
+
+.place-card p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.btn-map {
+    margin-top: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-map:hover {
+    background-color: #1e81b0;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* --------------------
+   Section Animations
+-------------------- */
+section {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInSection 1s forwards;
+    margin-bottom: 3rem;
+}
+
+section:nth-of-type(1) { animation-delay: 0.2s; }
+section:nth-of-type(2) { animation-delay: 0.4s; }
+section:nth-of-type(3) { animation-delay: 0.6s; }
+
+/* --------------------
+   Footer
+-------------------- */
+footer {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* --------------------
+   Animations
+-------------------- */
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInSection {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* --------------------
+   Responsive
+-------------------- */
+@media (max-width: 768px) {
+    .carousel-caption h2 { font-size: 1.8rem; }
+    .carousel-caption p { font-size: 1rem; }
+}
