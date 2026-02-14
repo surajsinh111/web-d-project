@@ -1,0 +1,43 @@
+.hero-carousel .carousel-item img {
+    height: 60vh;
+    object-fit: cover;
+    transition: transform 1s ease;
+}
+.hero-carousel .carousel-item.active img {
+    transform: scale(1.05);
+}
+.hero-carousel .carousel-caption {
+    background: rgba(0,0,0,0.45);
+    border-radius: 10px;
+    padding: 1.5rem 2rem;
+    animation: fadeInUp 1s ease forwards;
+}
+.btn-hero {
+    margin-top: 1rem;
+    transition: all 0.2s ease;
+}
+.btn-hero:hover {
+    transform: translateY(-3px);
+}
+.place-card, .food-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.place-card img, .food-card img {
+    transition: transform 0.3s ease;
+}
+.place-card:hover img, .food-card:hover img {
+    transform: scale(1.05);
+}
+.place-card:hover, .food-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.25);
+}
+section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s, transform 1s;
+}
